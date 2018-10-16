@@ -1,4 +1,5 @@
 package org.firstinspires.ftc.teamcode;
+
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -70,12 +71,12 @@ public class TestRobotTeleOp extends LinearOpMode{
 
         
         if (gamepad1.left_trigger > 0){
-         leftArmPos = .8;
-         rightArmPos = 0.8;
+         leftArmPos = leftArmPos + .1;
+         rightArmPos = rightArmPos + 0.1;
         }
         if (gamepad1.right_trigger > 0){
-         leftArmPos = 0;
-         rightArmPos = 0;
+         leftArmPos = leftArmPos - .1;
+         rightArmPos = rightArmPos - .1;
         }
         
         telemetry.addData("left_trigger",gamepad1.left_trigger);
